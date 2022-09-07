@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+</head>
+
+<body>
+
+
+  <script >
+    function rot13(str) { // LBH QVQ VG!
+  let result=str.split('').map(x=>{
+    if(/[a-z]/i.test(x)){
+      let resultASCIIValue;
+      let inpASCIIValue=x.charCodeAt(0);
+      if(inpASCIIValue-13<65){
+        resultASCIIValue=91-(65-(inpASCIIValue-13));
+      }
+      else{
+        resultASCIIValue=inpASCIIValue-13;
+      }
+      return String.fromCharCode(resultASCIIValue);
+    }
+    return x;
+  });
+  return result.join('');
+}
+
+// Change the inputs below to test
+console.log(rot13("SERR PBQR PNZC"));
+  </script>
+</body>
+
+</html>

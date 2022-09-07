@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
+<body>
+
+ 
+
+  <script >
+
+
+function palindrome(str) {
+
+str=str.match(/[a-z0-9]/ig);
+let originalString=str.join('').toLowerCase();
+let reverseString=str=str.reverse().join('').toLowerCase();
+
+if(originalString===reverseString)
+  return true;
+
+return false;
+}
+
+
+
+console.log(palindrome("_12eye"));
+
+
+
+
+  </script>
+</body>
+
+</html>
